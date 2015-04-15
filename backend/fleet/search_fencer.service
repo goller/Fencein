@@ -9,5 +9,5 @@ ExecStartPre=-/usr/bin/docker rm -f %p
 ExecStartPre=-/usr/bin/docker pull goller/fencein
 ExecStart=/usr/bin/bash -c \
  "/usr/bin/docker run \
- --name %p python3 search_fencing.py $(etcdctl get /services/db/fencein/auth)"
+ --name %p goller/fencein python3 search_fencing.py $(etcdctl get /services/db/fencein/auth)"
 ExecStop= /usr/bin/docker stop -t 3 %p
