@@ -1,0 +1,6 @@
+pandas
+nameparser
+requests
+sseclient
+robobrowser
+docopt
